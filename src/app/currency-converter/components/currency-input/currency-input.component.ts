@@ -28,7 +28,7 @@ export class CurrencyInputComponent implements OnInit{
     const cleanedInput = this.cleanInput(inputValue);
     const currencyAmount = parseFloat(cleanedInput);
 
-    if (this.shouldSkipFormatting(inputValue)) return cleanedInput;
+    if (this.shouldSkipFormatting(inputValue)) return inputValue;
 
     if (isNaN(currencyAmount)) return cleanedInput;
 
