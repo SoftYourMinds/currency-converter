@@ -1,9 +1,9 @@
 
-export type Country = {
+export type Countries = {
   [countryCode: string]: CountryData
 }
 
-type CountryData = {
+export type CountryData = {
   name: string;
   currencies: Currencies,
   flag: Flag,

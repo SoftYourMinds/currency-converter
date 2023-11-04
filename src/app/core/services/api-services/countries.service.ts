@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Country } from 'src/app/shared/models/TCountry';
+import { Countries } from 'src/app/shared/models/TCountry';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 
@@ -10,8 +10,8 @@ export class CountriesService {
 
   constructor(private http: HttpClient) { }
 
-  public getCountries():Observable<Country[]> {
-    return this.http.get<Country[]>(environment.countriesApiPath+"/all");
+  public getCountries():Observable<Countries> {
+    return this.http.get<Countries>(environment.countriesApiPath+"/all");
   }
 
 }
